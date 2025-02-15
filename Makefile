@@ -26,7 +26,8 @@ curl-impersonate-$(VERSION)/chrome/patches: $(CURL_VERSION)
 	touch .preprocessed
 
 local-curl: $(CURL_VERSION)
-	cp /usr/local/lib/libcurl-impersonate-chrome* /Users/runner/work/_temp/install/lib/
+	mkdir -p $(CURDIR)/install/lib
+	cp /usr/local/lib/libcurl-impersonate-chrome* $(CURDIR)/install/lib
 	cd $(CURL_VERSION)
 	for p in ../curl-impersonate/chrome/patches/curl-*.patch; do patch -p1 < ../$$p; done
 	# Re-generate the configure script
