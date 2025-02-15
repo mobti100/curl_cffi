@@ -30,7 +30,7 @@
         "system": "Darwin",
         "machine": "arm64",
         "pointer_size": 64,
-        "libdir": "/Users/runner/work/_temp/install/lib",
+        "libdir": "./install/lib",
         "sysname": "macos",
         "so_name": "libcurl-impersonate-chrome.4.dylib",
         "so_arch": "arm64"
